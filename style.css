@@ -1,0 +1,305 @@
+/* Define color variables */
+:root {
+    --color-dark-black: #000000;  /* Dark Black */
+    --color-dark-gray: #333333;   /* Dark Gray */
+    --color-light-gray: #666666;  /* Light Gray for header and footer */
+    --color-white: #ffffff;       /* White text color */
+    --color-orange: #ff6600;      /* Orange */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-white); /* White text color */
+    background-color: var(--color-dark-black); /* Dark Black background */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--color-light-gray); /* Light Gray background */
+    color: var(--color-orange); /* Orange text color */
+    padding: 0.2em 0; /* Further reduced height of the header */
+    border-bottom: 2px solid var(--color-orange); /* Thinner orange underline */
+    animation: fadeIn 1s ease-in-out;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.5em; /* Reduced horizontal padding */
+}
+
+#title {
+    margin-bottom: 0.1em; /* Further reduced space below title */
+    font-size: 2em; /* Reduced font size */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    animation: slideIn 1s ease-out;
+}
+
+#subtitle {
+    margin: 0; /* Removed margin to reduce space below subtitle */
+    font-size: 1em; /* Reduced font size */
+}
+
+/* Header Container for Navigation */
+#header-container-1 {
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    width: 100%;
+    margin-top: 0; /* No space above navigation */
+}
+
+nav {
+    margin-top: 0; /* Remove top margin for nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 0.3em; /* Adjusted spacing for navbar items */
+}
+
+nav ul li a {
+    color: var(--color-orange); /* Orange color */
+    text-decoration: none;
+    font-size: 1em; /* Reduced font size */
+    padding: 0.3em 0.5em; /* Reduced padding */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-white); /* White color */
+    background-color: var(--color-orange); /* Orange background */
+}
+
+/* Section Styles */
+section {
+    padding: 2em 1em;
+    background-color: var(--color-dark-gray); /* Dark Gray background for sections */
+    margin: 1em auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+section:nth-of-type(even) {
+    background-color: #f9f9f9; /* Light grey for alternating sections */
+}
+
+h2 {
+    color: var(--color-white); /* White color */
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid var(--color-orange); /* Orange underline */
+    padding-bottom: 0.3em;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+h3 {
+    color: var(--color-white); /* White color */
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    color: var(--color-white); /* White color */
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+h5 {
+    color: var(--color-orange); /* Orange color */
+    font-size: 1.1em;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 1.5em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+/* About Section Styles */
+#about-container {
+    text-align: left; /* Align text to the left */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    position: relative;
+    overflow: hidden; /* Ensure content stays within container */
+}
+
+#summary-image {
+    width: 350px; /* Set width */
+    height: 350px; /* Set height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    float: left; /* Float the image to the left to wrap text around it */
+    margin: 0 1em 1em 0; /* Add space around the image: top, right, bottom, left */
+    border: 2px solid var(--color-orange); /* Orange border for styling */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Experience Section Styles */
+#experience {
+    background-color: var(--color-dark-gray); /* Dark Gray background */
+}
+
+#experience-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* Skills Section Styles */
+#skills {
+    background-color: var(--color-dark-gray); /* Dark Gray background */
+}
+
+#skills-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* Projects Section Styles */
+#projects {
+    background-color: var(--color-dark-gray); /* Dark Gray background */
+}
+
+#projects-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* Education Section Styles */
+#education-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.education-item {
+    margin-bottom: 2em;
+}
+
+.education-item img {
+    width: 350px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1em; /* Add space to the right of the image */
+    float: left; /* Float the image to the left */
+    border: 2px solid var(--color-orange); /* Orange border for styling */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.education-item p {
+    margin: 0; /* Remove default margin */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-light-gray); /* Light Gray background */
+    color: var(--color-orange); /* Orange text color */
+    padding: 1em 0;
+    text-align: center;
+    border-top: 3px solid var(--color-orange); /* Orange top border */
+}
+
+/* Links */
+a {
+    color: var(--color-orange); /* Orange color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-dark-black); /* Dark Black color */
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1em;
+    }
+    
+    #header-container {
+        text-align: center; /* Center text on smaller screens */
+    }
+    
+    #header-container-1 {
+        justify-content: center; /* Center navigation on smaller screens */
+        margin-top: 1em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5em 0;
+    }
+    
+    section {
+        padding: 1em;
+    }
+}
